@@ -1,8 +1,10 @@
 part of 'separated.dart';
 
 class DigitSeparatedItem extends BaseDigitsSeparated {
+  final EdgeInsetsGeometry? padding;
   const DigitSeparatedItem({
     super.key,
+    this.padding,
     required super.height,
     required super.width,
     required super.decoration,
@@ -67,6 +69,7 @@ class DigitSeparatedItem extends BaseDigitsSeparated {
       height: height,
       width: width,
       decoration: decoration,
+      padding: padding,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
