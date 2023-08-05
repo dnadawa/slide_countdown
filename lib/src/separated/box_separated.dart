@@ -10,12 +10,14 @@ class BoxSeparated extends StatelessWidget {
   /// {$macro box_separated}
   const BoxSeparated({
     super.key,
+    this.padding,
     required this.height,
     required this.width,
     required this.decoration,
     required this.child,
   });
 
+  final EdgeInsetsGeometry? padding;
   /// The height of the container.
   final double height;
 
@@ -31,8 +33,9 @@ class BoxSeparated extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height,
-      width: width,
+      // height: height,
+      // width: width,
+      padding: padding ?? EdgeInsets.zero,
       decoration: decoration,
       clipBehavior: Clip.hardEdge,
       alignment: Alignment.center,
